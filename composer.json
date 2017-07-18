@@ -1,0 +1,21 @@
+{
+    "name": "pulkitjalan/xero-laravel",
+    "description": "A Laravel 5 wrapper for Xero",
+    "homepage": "https://github.com/pulkitjalan/xero-laravel",
+    "keywords": ["xero", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pulkit Jalan"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "calcinai/xero-php": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PulkitJalan\\Xero\\": "src"
+        }
+    }
+}
