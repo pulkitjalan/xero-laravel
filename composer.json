@@ -1,21 +1,34 @@
 {
-    "name": "pulkitjalan/xero-laravel",
-    "description": "A Laravel 5 wrapper for Xero",
-    "homepage": "https://github.com/pulkitjalan/xero-laravel",
-    "keywords": ["xero", "laravel"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Pulkit Jalan"
-        }
-    ],
-    "require": {
-        "php": ">=5.5",
-        "calcinai/xero-php": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "PulkitJalan\\Xero\\": "src"
-        }
+  "name": "pulkitjalan/xero-laravel",
+  "description": "A Laravel 5 wrapper for Xero",
+  "homepage": "https://github.com/pulkitjalan/xero-laravel",
+  "keywords": ["xero", "laravel"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pulkit Jalan"
     }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "illuminate/support": "~5.0",
+    "calcinai/xero-php": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PulkitJalan\\Xero\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PulkitJalan\\Xero\\XeroServiceProvider"
+      ],
+      "aliases": {
+        "XeroPrivate": "PulkitJalan\\Xero\\Facades\\XeroPrivate",
+        "XeroPublic": "PulkitJalan\\Xero\\Facades\\XeroPublic",
+        "XeroPartner": "PulkitJalan\\Xero\\Facades\\XeroPartner"
+      }
+    }
+  }
 }

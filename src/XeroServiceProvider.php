@@ -52,15 +52,15 @@ class XeroServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/config/config.php', 'xero');
 
         $this->app->singleton(PrivateApplication::class, function ($app) {
-            return new PrivateApplication($app['config']['xero']);
+            return new PrivateApplication(array_get($app, 'config.xero'));
         });
 
         $this->app->singleton(PublicApplication::class, function ($app) {
-            return new PublicApplication($app['config']['xero']);
+            return new PublicApplication(array_get($app, 'config.xero'));
         });
 
         $this->app->singleton(PartnerApplication::class, function ($app) {
-            return new PartnerApplication($app['config']['xero']);
+            return new PartnerApplication(array_get($app, 'config.xero'));
         });
     }
 
