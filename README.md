@@ -17,10 +17,12 @@ This package wraps [calcinai/xero-php](https://github.com/calcinai/xero-php) pac
 Require the package
 
 ```sh
-composer require pulkitjalan/xero-laravel "1.*"
+composer require pulkitjalan/xero-laravel
 ```
 
-Add the following to the `providers` array in your `config/app.php`
+Laravel 5.5 uses Package Auto-Discovery, so you don't need to manually add the ServiceProvider.
+
+If you don't use auto-discovery, add the following to the `providers` array in your `config/app.php`
 
 ```php
 PulkitJalan\Xero\XeroServiceProvider::class,
