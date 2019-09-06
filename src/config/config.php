@@ -38,7 +38,7 @@ return [
         |
         | Ensure that you have generated the required private and public rsa keys
         | using the guide provided:
-        | 
+        |
         | https://developer.xero.com/documentation/api-guides/create-publicprivate-key
         |
         | Provide the path to the keys on disk or a PEM formatted string

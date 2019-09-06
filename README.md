@@ -1,12 +1,12 @@
 Xero Laravel
 =============
-> A Laravel 5 wrapper for Xero
+> A Laravel wrapper for Xero
 
 [![Total Downloads](https://img.shields.io/packagist/dt/pulkitjalan/xero-laravel.svg?style=flat-square)](https://packagist.org/packages/pulkitjalan/xero-laravel)
 
 ## Requirements
 
-* PHP >= 5.5
+* PHP >= 7.2
 * php_curl extension - ensure a recent version (7.30+)
 * php_openssl extension
 

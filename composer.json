@@ -10,16 +10,22 @@
     }
   ],
   "require": {
-    "php": ">=5.5",
-    "illuminate/support": "~5.0",
-    "calcinai/xero-php": "*"
+    "php": "^7.2",
+    "illuminate/support": "~5.8.0|^6.0",
+    "calcinai/xero-php": "^1.8"
   },
   "autoload": {
     "psr-4": {
       "PulkitJalan\\Xero\\": "src"
     }
   },
+  "config": {
+    "sort-packages": true
+  },
   "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    },
     "laravel": {
       "providers": [
         "PulkitJalan\\Xero\\XeroServiceProvider"
