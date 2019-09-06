@@ -2,10 +2,11 @@
 
 namespace PulkitJalan\Xero;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
+use XeroPHP\Application\PublicApplication;
 use XeroPHP\Application\PartnerApplication;
 use XeroPHP\Application\PrivateApplication;
-use XeroPHP\Application\PublicApplication;
 
 class XeroServiceProvider extends ServiceProvider
 {
@@ -52,15 +53,15 @@ class XeroServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/config/config.php', 'xero');
 
         $this->app->singleton(PrivateApplication::class, function ($app) {
-            return new PrivateApplication(array_get($app['config'], 'xero'));
+            return new PrivateApplication(Arr::get($app['config'], 'xero'));
         });
 
         $this->app->singleton(PublicApplication::class, function ($app) {
-            return new PublicApplication(array_get($app['config'], 'xero'));
+            return new PublicApplication(Arr::get($app['config'], 'xero'));
         });
 
         $this->app->singleton(PartnerApplication::class, function ($app) {
-            return new PartnerApplication(array_get($app['config'], 'xero'));
+            return new PartnerApplication(Arr::get($app['config'], 'xero'));
         });
     }
 
