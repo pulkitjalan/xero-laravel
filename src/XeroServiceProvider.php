@@ -7,16 +7,10 @@ use Illuminate\Support\ServiceProvider;
 use XeroPHP\Application\PublicApplication;
 use XeroPHP\Application\PartnerApplication;
 use XeroPHP\Application\PrivateApplication;
+use Illuminate\Contracts\Support\DeferrableProvider;
 
-class XeroServiceProvider extends ServiceProvider
+class XeroServiceProvider extends ServiceProvider implements DeferrableProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = true;
-
     /**
      * Bootstrap the application services.
      *
