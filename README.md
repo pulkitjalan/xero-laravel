@@ -1,3 +1,6 @@
+# :warning: Archived
+### This project is no longer maintained.
+
 Xero Laravel
 =============
 > A Laravel wrapper for Xero
